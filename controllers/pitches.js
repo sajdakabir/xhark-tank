@@ -9,7 +9,6 @@ export const createPost=async(req,res)=>{
     try {
         await newPitch.save();
         res.status(201).json({
-            message:'Pitch created successfully',
             _id:newPitch._id,
         });
     } catch (error) {
@@ -19,4 +18,12 @@ export const createPost=async(req,res)=>{
 
 export const getPitches=async(req,res)=>{
 
+    try {
+        const postPitches=await Pitch.find();
+        res.status(201).json(postPitches);
+    } catch (error) {
+        res.status(404).json({message:error.message});
+    }
 };
+
+
