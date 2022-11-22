@@ -16,3 +16,7 @@ export const createPost=async(req,res)=>{
         res.status(400).json({message:error.message});
     }
 };
+
+export const getPitches=async(req,res)=>{
+
+};
