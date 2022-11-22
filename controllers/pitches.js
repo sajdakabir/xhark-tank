@@ -26,4 +26,7 @@ export const getPitches=async(req,res)=>{
     }
 };
 
+export const getOnePitch=async(req,res)=>{
+
+};
 
