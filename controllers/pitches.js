@@ -26,4 +26,20 @@ export const getPitches=async(req,res)=>{
     }
 };
 
+export const getOnePitch=async(req,res)=>{
+    const {id}=req.params;
+    
+
+    try {
+        const pitch=await Pitch.findById(id);
+        if(!pitch){
+            res.status(400);
+            throw new error("Pitch not exits")
+        }
+        res.status(201).json(pitch);
+        
+    } catch (error) {
+        res.status(404).json({message:error.message});
+    }
+};
 
