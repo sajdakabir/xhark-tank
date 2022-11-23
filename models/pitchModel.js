@@ -24,19 +24,7 @@ const pitchSchema = mongoose.Schema({
     offers: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            investor:{
-                type: String,
-                required: true,
-            },
-            amount:{
-                type: Number,
-            },
-            equity:{
-                type:Number,
-            },
-            comment:{
-                type:String,
-            }
+            ref:'Investor'
 
         }
     ],
