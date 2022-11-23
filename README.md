@@ -11,21 +11,27 @@
 ## Setup
 
 Clone the project
+```
+    git clone <repo url>
+```
 
 Go to the project directory
 
 ```bash
   cd XhaekTank
 ```
-### Running backend
 
+
+# make .env file and put this 
 ```
-#make .env file
-
 PROT=port
 MONGO_URL=Your mongodb url
 
 ```
+
+### Running backend
+
+
 
 
 ```shell
