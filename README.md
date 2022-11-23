@@ -9,10 +9,11 @@
 **Database:** Mongo DB
 
 ## Setup
+To run API locally, make sure to create a ```.env ```file and copy variables from ```example.env``` and give them valid values as well
 
 Clone the project
 ```
-    git clone <repo url>
+ git clone <repo url>
 ```
 
 Go to the project directory
@@ -22,16 +23,9 @@ Go to the project directory
 ```
 
 
-# make .env file and put this 
-```
-PROT=port
-MONGO_URL=Your mongodb url
 
-```
 
 ### Running backend
-
-
 
 
 ```shell
