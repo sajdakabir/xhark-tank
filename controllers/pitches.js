@@ -32,7 +32,7 @@ export const getOnePitch = async (req, res) => {
 
 
     try {
-        const pitch = await Pitch.findById(id);
+        const pitch = await Pitch.findById(id).populate('offers');
         if (!pitch) {
             res.status(400);
             throw new error("Pitch not exits")
