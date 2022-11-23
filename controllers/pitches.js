@@ -20,7 +20,7 @@ export const createPost = async (req, res) => {
 export const getPitches = async (req, res) => {
 
     try {
-        const postPitches = await Pitch.find().populate('offers');
+        const postPitches = await Pitch.find().sort({createdAt:-1}).populate('offers');
         res.status(201).json(postPitches);
     } catch (error) {
         res.status(404).json({ message: error.message });
