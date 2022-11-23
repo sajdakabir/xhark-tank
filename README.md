@@ -36,3 +36,10 @@ $ npm instal
 $ npm start
 
 ```
+
+ ### API Offers endpoints for
+
+ - [x] Post a pitch
+ - [x] Make a counter offer for a pitch
+ - [x] All the pitches
+ - [x] Fetch a single Pitch
