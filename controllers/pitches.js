@@ -43,3 +43,13 @@ export const getOnePitch=async(req,res)=>{
     }
 };
 
+export const makeOfferByInvestor=async(req,res)=>{
+    const pitchId=req.params.id;
+    try {
+        const pitch=await Pitch.findById(pitchId);
+        
+    } catch (error) {
+        
+    }
+};
+
