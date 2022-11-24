@@ -21,16 +21,7 @@ export const getPitches = async (req, res) => {
 
     try {
         const postPitches = await Pitch.find().sort({createdAt:-1}).populate('offers');
-        res.status(200).json({
-            id:pitch._id,
-            entrepreneur:pitch.entrepreneur,
-            pitchTitle:pitch.pitchTitle,
-            pitchIdea:pitch.pitchIdea,
-            askAmount:pitch.askAmount,
-            equity:pitch.equity,
-            offers:pitch.offers,
-
-        });
+        res.status(200).json(postPitches);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -46,7 +37,16 @@ export const getOnePitch = async (req, res) => {
             res.status(400);
             throw new error("Pitch not exits")
         }
-        res.status(200).json(pitch);
+        res.status(200).json({
+            id:pitch._id,
+            entrepreneur:pitch.entrepreneur,
+            pitchTitle:pitch.pitchTitle,
+            pitchIdea:pitch.pitchIdea,
+            askAmount:pitch.askAmount,
+            equity:pitch.equity,
+            offers:pitch.offers,
+
+        });
 
     } catch (error) {
         res.status(404).json({ message: error.message });
