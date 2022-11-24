@@ -21,7 +21,16 @@ export const getPitches = async (req, res) => {
 
     try {
         const postPitches = await Pitch.find().sort({createdAt:-1}).populate('offers');
-        res.status(200).json(postPitches);
+        res.status(200).json({
+            id:pitch._id,
+            entrepreneur:pitch.entrepreneur,
+            pitchTitle:pitch.pitchTitle,
+            pitchIdea:pitch.pitchIdea,
+            askAmount:pitch.askAmount,
+            equity:pitch.equity,
+            offers:pitch.offers,
+
+        });
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
