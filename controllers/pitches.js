@@ -21,7 +21,7 @@ export const getPitches = async (req, res) => {
 
     try {
         const postPitches = await Pitch.find().sort({createdAt:-1}).populate('offers');
-        res.status(201).json(postPitches);
+        res.status(200).json(postPitches);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -37,7 +37,7 @@ export const getOnePitch = async (req, res) => {
             res.status(400);
             throw new error("Pitch not exits")
         }
-        res.status(201).json(pitch);
+        res.status(200).json(pitch);
 
     } catch (error) {
         res.status(404).json({ message: error.message });
@@ -60,7 +60,7 @@ export const makeOfferByInvestor = async (req, res) => {
         await newOffer.save();
         pitch.offers.push(newOffer);
         pitch.save();
-        res.status(201).json({
+        res.status(200).json({
             _id: newOffer._id,
         });
 
