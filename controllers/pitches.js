@@ -10,7 +10,7 @@ export const createPost = async (req, res) => {
     try {
         await newPitch.save();
         res.status(201).json({
-            _id: newPitch._id,
+            id: newPitch._id,
         });
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -70,7 +70,7 @@ export const makeOfferByInvestor = async (req, res) => {
         pitch.offers.push(newOffer);
         pitch.save();
         res.status(200).json({
-            _id: newOffer._id,
+            id: newOffer._id,
         });
 
     } catch (error) {
