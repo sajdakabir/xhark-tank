@@ -43,3 +43,9 @@ $ npm start
  - [x] Make a counter offer for a pitch
  - [x] All the pitches in the reverse chronological order
  - [x] Fetch a single Pitch
+ 
+ 
+ 
+Thanks,
+
+Sajda
