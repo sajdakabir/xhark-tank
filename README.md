@@ -46,6 +46,10 @@ $ npm start
  
  
  
+ NOTE:This is an assignment project given by the PhonePe Tech schooler Team .
+ 
+ 
+ 
 Thanks,
 
 Sajda
