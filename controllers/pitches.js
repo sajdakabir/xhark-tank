@@ -8,6 +8,10 @@ export const createPost = async (req, res) => {
     const newPitch = new Pitch({ ...pitch, createdAt: new Date().toISOString() });
 
     try {
+        if(req.body.equity>100){
+            res.status(400);
+            throw new error("check you equity")
+        }
         await newPitch.save();
         res.status(201).json({
             id: newPitch._id,
@@ -57,6 +61,12 @@ export const makeOfferByInvestor = async (req, res) => {
     const { id } = req.params;
 
     try {
+        if(req.body.equity>100){
+            res.status(400);
+            throw new error("check you equity")
+        }
+    
+
         const pitch = await Pitch.findById(id);
         if (!pitch) {
             return res.status(404).json({
