@@ -44,7 +44,7 @@ $ npm start
  - [x] Fetch all the pitches in the reverse chronological order
  - [x] Fetch a single Pitch
  
- #
+  #
  
  NOTE:This is an assignment project given by the PhonePe Tech schooler Team .
  
