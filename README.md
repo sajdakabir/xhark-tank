@@ -30,7 +30,7 @@ Go to the project directory
 
 ```shell
 #install dependencies
-$ npm instal
+$ npm install
 
 #Start the server
 $ npm start
