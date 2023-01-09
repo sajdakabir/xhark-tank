@@ -28,11 +28,27 @@ const pitchSchema = mongoose.Schema({
 
         }
     ],
-    createdAt:{
-        type:Date,
-        default: new Date()
-    },
+    // createdAt:{
+    //     type:Date,
+    //     default: new Date()
+    // },
 
+});
+
+// Duplicate the ID field.
+pitchSchema.virtual('id').get(function(){
+    return this._id.toHexString();
+});
+
+
+// Ensure virtual fields are serialised.
+pitchSchema.set('toJSON', {
+    virtuals: true,
+    virtuals: true,
+    versionKey:false,
+    transform:function(doc,ret){
+        delete ret._id
+    },
 });
 const Pitch=mongoose.model('Pitch',pitchSchema);
 export default Pitch;
