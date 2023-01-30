@@ -15,7 +15,7 @@ connectDB();
 app.use('/pitches',pitchRoutes);
 
 
-const port=process.env.PORT || 5000;
+const port=process.env.PORT || 8081;
 const start=async()=>{
     try {
         app.listen(port,()=>console.log(`Server is running on post ${port}`.yellow.bold));
