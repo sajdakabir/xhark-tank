@@ -12,6 +12,12 @@ dotenv.config();
 
 connectDB();
 
+app.get('/', async (req, res) => {
+    res.status(200).send({
+      message: 'Hello from XharkTank!'
+    })
+  });
+  
 app.use('/pitches',pitchRoutes);
 
 
