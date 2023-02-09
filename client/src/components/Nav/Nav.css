@@ -1,0 +1,13 @@
+.logo {
+    width: 7rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  
+.darkLogo{
+    cursor: pointer;
+}
+
+.b{
+    background-color: rgb(3, 2, 2);
+}

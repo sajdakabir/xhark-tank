@@ -1,11 +1,11 @@
 import React from 'react';
 import "./App.css";
-import NavBar from './components/NavBar/NavBar';
+import Nav from './components/Nav/Nav';
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div >
-      <NavBar/>
+      <Nav />
     </div>
   )
 }
