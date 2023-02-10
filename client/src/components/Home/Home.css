@@ -1,0 +1,36 @@
+
+.bgImage {
+    min-height:100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+      url('../../images/sharks-sea.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8rem;
+  }
+  .image-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-parent .logo2 {
+    width: 12rem;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  }
+  .image-parent .cartoon {
+    width: 40rem;
+    margin-top: 1.5rem;
+  }
+  .image-parent .pitch {
+    width: 40vw;
+    height: auto;
+    margin-bottom: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.703);
+    padding: 1rem;
+  }
+  
