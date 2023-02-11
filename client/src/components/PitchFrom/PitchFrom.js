@@ -13,7 +13,7 @@ function PitchFrom() {
   return (
     <>
        <Button className="button f" onClick={handleShow}>
-        <AddIcon className='addIcon'  sx={{ mr: 4 }}></AddIcon>
+        <AddIcon className='addIcon' sx={{ mr:1}}></AddIcon>
          Pitch Your Idea
       </Button>
     </>
