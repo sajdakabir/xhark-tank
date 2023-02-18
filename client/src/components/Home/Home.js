@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeroLogo from '../../images/Logo1.png';
 import HeroImg from '../../images/human.png';
 import { Container } from "react-bootstrap";
 import './Home.css';
 import PitchFrom from '../PitchFrom/PitchFrom';
+import DefaultBox from "../Pitchs/DefaultBox";
 function Home() {
+    const [pitchs,setPitchs]=useState([]);
+
+    useEffect(()=>{
+        async function getPitches (){
+            const response= await fetch("http://localhost:8081/pitches");
+
+            if(!response.ok){
+                const message=`An error occurred : ${response.statusText}`;
+                window.alert(message);
+                return;
+            }
+            const pitchs=await response.json();
+            console.log(pitchs);
+            setPitchs(pitchs);
+        }
+        getPitches();
+        return;
+    },[pitchs.length]);
+
+    const pitchList=()=>{
+        return pitchs.map((pitch)=>{
+
+        });
+    };
+
     return (
         <>
             <Container fluid className="bgImage">
@@ -18,7 +44,8 @@ function Home() {
                         <div>
                             {/* {pitchs.length == 0 && <DefaultBox></DefaultBox>}
               {pitchList()} */}
-                            pitchList
+
+                            <DefaultBox/>
                         </div>
                     </div>
                     <div></div>

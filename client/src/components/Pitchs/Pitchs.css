@@ -1,0 +1,23 @@
+.default{
+    width: 40vw;
+    height: 30vh;
+    margin-bottom: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.703);
+    padding: 1rem;
+  }
+  div h6{
+    font-family: "Sofia Sans", sans-serif !important;
+    font-weight: 500;
+    font-size:1rem;
+    color: rgb(28, 28, 28);
+    margin-bottom : 5px;
+  }
+  .counter-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .counter-button div{
+      margin-top:4px;
+  }
+  
