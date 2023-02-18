@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import './Home.css';
 import PitchFrom from '../PitchFrom/PitchFrom';
 import DefaultBox from "../Pitchs/DefaultBox";
+import Pithcs from "../Pitchs/Pitchs.js";
 function Home() {
     const [pitchs,setPitchs]=useState([]);
 
@@ -27,7 +28,9 @@ function Home() {
 
     const pitchList=()=>{
         return pitchs.map((pitch)=>{
-
+            <div className='pitch'>
+                <Pithcs pitch={pitch}></Pithcs>
+            </div>
         });
     };
 
@@ -45,7 +48,8 @@ function Home() {
                             {/* {pitchs.length == 0 && <DefaultBox></DefaultBox>}
               {pitchList()} */}
 
-                            <DefaultBox/>
+                            {/* <DefaultBox/> */}
+                            {pitchList()}
                         </div>
                     </div>
                     <div></div>
