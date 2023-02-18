@@ -20,6 +20,7 @@
   }
   .image-parent .logo2 {
     width: 12rem;
+    margin-right: 5rem;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
   .image-parent .cartoon {
