@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
+import cors from "cors";
 import connectDB from './db/connect.js';
 import pitchRoutes from './routes/pitches.js';
 
@@ -8,7 +9,13 @@ const app=express();
 app.use(express.json());
 dotenv.config();
 
+const corsOptions ={
+  origin:'*', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
 
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
 connectDB();
 
