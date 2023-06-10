@@ -1,6 +1,6 @@
 ## XharkTank
 
- XharkTank is a platform where we connect new enthusiastic entrepreneurs to investors. Here, entrepreneurs can post their idea/pitches with their asked amount and exchangeable equity and investors can make a counteroffer.
+XharkTank serves as a dynamic platform that facilitates meaningful connections between aspiring entrepreneurs and investors. On this platform, entrepreneurs can confidently share their innovative ideas and investment proposals, while investors have the opportunity to engage and present counteroffers.
 
  ### Tech Stack
 
