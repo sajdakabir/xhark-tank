@@ -15,4 +15,4 @@ pytest-pspec==0.0.4
 requests==2.25.1
 six==1.15.0
 toml==0.10.2
-urllib3==1.26.4
+urllib3==1.26.18
